@@ -40,6 +40,13 @@ public class WelcomeController {
         return "news";
     }
 
+    @RequestMapping("/userinfo")
+    public String userinfo(Map<String, Object> model) {
+        model.put("firstname", "Ivan");
+        model.put("lastname", "Petrov");
+        return "userinfo";
+    }
+
 
     @RequestMapping(value = "/printme/{data}", method = RequestMethod.GET)
     public String printme(Map<String, Object> model, @PathVariable("data") String data) {

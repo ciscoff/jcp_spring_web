@@ -28,21 +28,23 @@
     </div>
 </nav>
 
+<div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"/>
+</div>
+
 <div class="container">
     <div class="starter-template">
-        <h1>Spring Boot Web Thymeleaf Example</h1>
+        <h1>Home work. Task 2</h1>
         <h2>
-            <span th:text="'Message: Hello, ' + ${message} + '!'"></span>
-            <!--/*@thymesVar id="message" type="java.lang.String"*/-->
-            <!--<span th:text="'Message: Hello, ' + ${message.length()} + '!'"></span>-->
+            <span th:text="'Info: ' + ${firstname} + ' ' + ${lastname} + '!'"></span>
         </h2>
-        <button id="btnHello">Hello</button>
     </div>
 </div>
-<!-- /.container -->
+
 
 <script type="text/javascript"
-        src="webjars/jquery/3.2.1/jquery.js" />
+        src="webjars/jquery/3.2.1/jquery.js"/>
 
 <script type="text/javascript"
         src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
