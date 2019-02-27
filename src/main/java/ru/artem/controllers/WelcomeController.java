@@ -42,9 +42,17 @@ public class WelcomeController {
 
     @RequestMapping("/userinfo")
     public String userinfo(Map<String, Object> model) {
-        model.put("firstname", "Ivan");
-        model.put("lastname", "Petrov");
+//        model.put("firstname", "Ivan");
+//        model.put("lastname", "Petrov");
         return "userinfo";
+    }
+
+    @RequestMapping(value = "/signin/", method = RequestMethod.POST)
+    public String signin(Map<String, Object> model, @RequestParam("inputEmail") String email, @RequestParam("inputPassword") String password) {
+        System.out.println(email + ":" + password);
+        model.put("email", email);
+        model.put("password", password);
+        return "signin";
     }
 
 
