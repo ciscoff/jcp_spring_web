@@ -17,6 +17,9 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <hibernate.version>5.1.0.Final</hibernate.version>
     </properties>
 
     <dependencies>
@@ -44,9 +47,13 @@
             <artifactId>jquery</artifactId>
             <version>3.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.21.0</version>
+        </dependency>
 
         <!--<dependency>-->
-            <!--&lt;!&ndash; для взаимодействия с БД &ndash;&gt;-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
             <!--<exclusions>-->
@@ -56,19 +63,16 @@
                 <!--</exclusion>-->
             <!--</exclusions>-->
         <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/hikari-cp/hikari-cp &ndash;&gt;-->
         <!--<dependency>-->
             <!--<groupId>com.zaxxer</groupId>-->
             <!--<artifactId>HikariCP</artifactId>-->
             <!--<version>2.6.0</version>-->
         <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
         <!--<dependency>-->
             <!--<groupId>mysql</groupId>-->
             <!--<artifactId>mysql-connector-java</artifactId>-->
             <!--<version>5.1.26</version>-->
         <!--</dependency>-->
-        <!-- https://mvnrepository.com/artifact/hikari-cp/hikari-cp -->
     </dependencies>
 
 
