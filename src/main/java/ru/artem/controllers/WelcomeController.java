@@ -45,40 +45,40 @@ public class WelcomeController {
      * View         - шаблом html-страницы
      * Controller   - сервлет
      */
-    @RequestMapping("/")
-    public String welcome(Map<String, Object> model) {
-        model.put("message", "Java!");
-        return "welcome";           // Имя возвращаемой страницы html из пакета templates
-    }
+//    @RequestMapping("/")
+//    public String welcome(Map<String, Object> model) {
+//        model.put("message", "Java!");
+//        return "welcome";           // Имя возвращаемой страницы html из пакета templates
+//    }
 
-    @RequestMapping("/about")
-    public String about(Map<String, Object> model) {
-        model.put("test_param", param);
-        return "about";
-    }
-
-    @RequestMapping("/news")
-    public String news(Map<String, Object> model) {
-        model.put("spring", "Spring is great");
-        model.put("techno", "technology");
-        return "news";
-    }
-
-    /**
-     * Redirect to userinfo.html page
-     * @return userinfo.html
-     */
-    @RequestMapping("/userinfo")
-    public String userinfo() {
-        return "userinfo";
-    }
+//    @RequestMapping("/about")
+//    public String about(Map<String, Object> model) {
+//        model.put("test_param", param);
+//        return "about";
+//    }
+//
+//    @RequestMapping("/news")
+//    public String news(Map<String, Object> model) {
+//        model.put("spring", "Spring is great");
+//        model.put("techno", "technology");
+//        return "news";
+//    }
+//
+//    /**
+//     * Redirect to userinfo.html page
+//     * @return userinfo.html
+//     */
+//    @RequestMapping("/userinfo")
+//    public String userinfo() {
+//        return "userinfo";
+//    }
 
 
     /**
      * Read data from SQlite and create HTML-table
      * @return table
      */
-    @RequestMapping("/load")
+    @RequestMapping("/")
     public String load(Map<String, Object> model) {
         ArrayList<String> al = new ArrayList<>();
 
@@ -145,30 +145,30 @@ public class WelcomeController {
     }
 
 
-    @RequestMapping(value = "/signin/", method = RequestMethod.POST)
-    public String signin(Map<String, Object> model, @RequestParam("inputEmail") String email, @RequestParam("inputPassword") String password) {
-        System.out.println(email + ":" + password);
-        model.put("email", email);
-        model.put("password", password);
-        return "signin";
-    }
-
-
-    @RequestMapping(value = "/printme/{data}", method = RequestMethod.GET)
-    public String printme(Map<String, Object> model, @PathVariable("data") String data) {
-        model.put("data", data);
-        return "printme";
-    }
-
-    @RequestMapping(value = "/about/test_param", method = RequestMethod.POST)
-    @ResponseBody
-    public void addNewCustomer(@RequestParam("name_param") String nameParam) {
-        param = nameParam;
-        System.out.println(nameParam);
-    }
-
-    @RequestMapping(value = "/printme")
-    public void printmePut(Map<String, Object> model, String data) {
-        model.put("test_param", data);
-    }
+//    @RequestMapping(value = "/signin/", method = RequestMethod.POST)
+//    public String signin(Map<String, Object> model, @RequestParam("inputEmail") String email, @RequestParam("inputPassword") String password) {
+//        System.out.println(email + ":" + password);
+//        model.put("email", email);
+//        model.put("password", password);
+//        return "signin";
+//    }
+//
+//
+//    @RequestMapping(value = "/printme/{data}", method = RequestMethod.GET)
+//    public String printme(Map<String, Object> model, @PathVariable("data") String data) {
+//        model.put("data", data);
+//        return "printme";
+//    }
+//
+//    @RequestMapping(value = "/about/test_param", method = RequestMethod.POST)
+//    @ResponseBody
+//    public void addNewCustomer(@RequestParam("name_param") String nameParam) {
+//        param = nameParam;
+//        System.out.println(nameParam);
+//    }
+//
+//    @RequestMapping(value = "/printme")
+//    public void printmePut(Map<String, Object> model, String data) {
+//        model.put("test_param", data);
+//    }
 }
